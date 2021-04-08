@@ -1,44 +1,30 @@
-# password_philosophy
+# Day 02
 
-FIXME: description
+[Day 02](https://adventofcode.com/2020/day/2).
 
-## Installation
+### Exact description
+--- Day 2: Password Philosophy ---
 
-Download from http://example.com/FIXME.
+Your flight departs in a few days from the coastal airport; the easiest way down to the coast from here is via [toboggan](https://en.wikipedia.org/wiki/Toboggan).
 
-## Usage
+The shopkeeper at the North Pole Toboggan Rental Shop is having a bad day. "Something's wrong with our computers; we can't log in!" You ask if you can take a look.
 
-FIXME: explanation
+Their password database seems to be a little corrupted: some of the passwords wouldn't have been allowed by the Official Toboggan Corporate Policy that was in effect when they were chosen.
 
-    $ java -jar password_philosophy-0.1.0-standalone.jar [args]
+To try to debug the problem, they have created a list (your puzzle input) of passwords (according to the corrupted database) and the corporate policy when that password was set.
 
-## Options
+For example, suppose you have the following list:
 
-FIXME: listing of options this app accepts.
+```
+1-3 a: abcde
+1-3 b: cdefg
+2-9 c: ccccccccc
+```
 
-## Examples
+Each line gives the password policy and then the password. The password policy indicates the lowest and highest number of times a given letter must appear for the password to be valid. For example, ```1-3 a``` means that the password must contain ```a``` at least ```1``` time and at most ```3``` times.
 
-...
+In the above example, ```2``` passwords are valid. The middle password, ```cdefg```, is not; it contains no instances of ```b```, but needs at least ```1```. The first and third passwords are valid: they contain one ```a``` or nine ```c```, both within the limits of their respective policies.
 
-### Bugs
+**How many passwords are valid** according to their policies?
 
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
-
-## License
-
-Copyright © 2021 FIXME
-
-This program and the accompanying materials are made available under the
-terms of the Eclipse Public License 2.0 which is available at
-http://www.eclipse.org/legal/epl-2.0.
-
-This Source Code may also be made available under the following Secondary
-Licenses when the conditions for such availability set forth in the Eclipse
-Public License, v. 2.0 are satisfied: GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or (at your
-option) any later version, with the GNU Classpath Exception which is available
-at https://www.gnu.org/software/classpath/license.html.
+To begin, [get your puzzle input (part 1)](https://adventofcode.com/2020/day/2/input).
