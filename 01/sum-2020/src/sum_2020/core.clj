@@ -45,4 +45,3 @@
   [& args]
   (get-answers))
 
-;; (get-answers) ; => [876459 116168640]
