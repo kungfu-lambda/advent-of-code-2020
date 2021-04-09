@@ -13,7 +13,21 @@
      :min min :max max
      :cnt cnt :valid? valid?}))
 
+(defn read-input
+  "Reads input resource and returns lines as vector"
+  []
+  (->> "input.txt"
+       io/resource
+       slurp
+       cstr/split-lines))
+
+(defn count-valids [lines]
+  (->> lines
+       (map analyze-line)
+       (filter #(:valid? %))
+       count))
+
 (defn -main
-  "I don't do a whole lot ... yet."
+  "Automatically returns part-1 result"
   [& args]
-  (println "Hello, World!"))
+  (count-valids (read-input)))
