@@ -5,9 +5,9 @@
 
 ;; here i am returning a set because
 ;; (contains? some-set) is nearly instant.
-(defn read-input [inputname]
+(defn read-input! []
   (->>
-   inputname
+   "input.txt"
    io/resource
    slurp
    cs/split-lines
@@ -35,13 +35,11 @@
 (defn multiply-triplet [nums]
   (apply * (find-triplet nums)))
 
-(defn get-answers []
-  (let [nums (read-input "input.txt")
-        multiplied-pair (multiply-pair nums)
+(defn get-answers [nums]
+  (let [multiplied-pair (multiply-pair nums)
         multiplied-triplet (multiply-triplet nums)]
     [multiplied-pair multiplied-triplet]))
 
 (defn -main
   [& args]
-  (get-answers))
-
+  (get-answers (read-input!)))
