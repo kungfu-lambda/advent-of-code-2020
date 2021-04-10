@@ -9,9 +9,16 @@ programming puzzles for a variety of skill sets and skill levels that can be sol
 in any programming language you like. People use them as a speed contest, interview prep, company training, university coursework, practice problems, or to challenge each other.
 
 ## About repo structure
-There is a single directory for each day by the digit of the day, 
-and each day contains one [leiningen](https://leiningen.org/) project. 
+I used [leiningen](https://leiningen.org/) as package/project manager.
+Basically all the code is in
+```
+day_digit/project_name/src/project_name/core.clj
+```
 
-Each project contains solutions for both part-1 and part-2. Each project has a README.md.
 
-**I put answers only in** ```answer.edn``` in each project. You can examine the projects **without spoiler** and if you want you can take a peek at answers.
+Also i put answers **only in**
+```
+day_digit/project_name/answer.edn
+```
+
+So rest of the project is **spoiler free**.
