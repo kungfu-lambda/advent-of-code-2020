@@ -38,7 +38,7 @@
           {:cnt1 0 :cnt2 0}
           parsed-lines))
 
-(defn read-input
+(defn read-input!
   "Reads input resource and returns lines as vector"
   []
   (->> "input.txt"
@@ -49,6 +49,6 @@
 (defn -main
   "Automatically returns part-1 result"
   [& args]
-  (->> (read-input)
+  (->> (read-input!)
        (map parse-line)
        find-answers))
