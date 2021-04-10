@@ -1,6 +1,6 @@
 (ns sum-2020.core
   (:gen-class)
-  (:require [clojure.string :as cs]
+  (:require [clojure.string :as cstr]
             [clojure.java.io :as io]))
 
 ;; here i am returning a set because
@@ -10,7 +10,7 @@
    "input.txt"
    io/resource
    slurp
-   cs/split-lines
+   cstr/split-lines
    (map #(Integer/parseInt %))
    set))
 
